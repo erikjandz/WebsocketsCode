@@ -3,7 +3,7 @@ import socket
 # Some global variables
 HEADER = 64
 PORT = 5050
-SERVER = "192.168.2.31"
+SERVER = "192.168.99.1"
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
@@ -28,7 +28,7 @@ def handle_server():
             writeFile(message)
             print("[FILE UPDATED] client.txt got updated.")
 
-    except:
+    except Exception:
         print("[DISCONNECTED] we disconnected from the server.")
 
 
