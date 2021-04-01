@@ -101,7 +101,7 @@ def start():
         conn, addr = server.accept()
         registered_connections.add(conn)
 
-        # start a thread for the specific client to listen to him
+        # start a thread for the specific client to listen to him for updates
         client_handle_thread = threading.Thread(target=handle_client, args=(registered_connections, conn, addr))
         client_handle_thread.start()
         print(f"[ACTIVE CONNECTIONS] {len(registered_connections)}")

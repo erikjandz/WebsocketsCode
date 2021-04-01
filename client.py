@@ -3,7 +3,7 @@ import socket
 # Some global variables
 HEADER = 64
 PORT = 5050
-SERVER = "192.168.99.1"
+SERVER = "192.168.2.31"
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
@@ -13,12 +13,14 @@ client.connect(ADDR)
 print("[CONNECTED] connected to server...")
 
 
+# Update our file that got updated on the server
 def writeFile(content):
     f = open("client.txt", "w")
     f.write(content)
     f.close()
 
 
+# Main function to listen to the server and update our file
 def handle_server():
     try:
         while True:
@@ -30,6 +32,7 @@ def handle_server():
         print("[DISCONNECTED] we disconnected from the server.")
 
 
+# Function to make sending data easier
 def send(msg):
     message = msg.encode(FORMAT)
     msg_length = len(message)
