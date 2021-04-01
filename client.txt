@@ -1,0 +1,9 @@
+sampleRate=2
+useDummyData=true
+address=cerbus.nl
+macAddress=NO_MAC_ADDRESS
+keepAliveInterval=20
+cleanSession=1
+username=tno
+password=9rLiieLkVhy4HBgu8aCvEgnBMhhbRFq9
+
